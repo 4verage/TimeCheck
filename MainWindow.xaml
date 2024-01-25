@@ -1,0 +1,25 @@
+﻿<Window x:Class="TimeCheck.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimeCheck"
+        mc:Ignorable="d"
+        Title="Timezone Tool" Height="35" Width="259" Background="#FF151515" Foreground="#FFD3DC17" ResizeMode="NoResize" WindowStyle="None" BorderThickness="1">
+    <!-- Normal Border color: #FF3C3C3C -->
+    <Border x:Name="windowBorder" BorderBrush="#FF3C3C3C" BorderThickness="1" Padding="0">
+        <Grid x:Name="mainGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="63*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnClose" Content="X" HorizontalAlignment="Left" Margin="204,5,0,0" VerticalAlignment="Top" Width="22" Height="22" Background="{x:Null}" Foreground="#FF727271" BorderBrush="#FF3C3C3C" Padding="1.4,1,1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontFamily="{DynamicResource FontAwesome}" BorderThickness="1" PreviewMouseDown="btnClose_Click"/>
+            <TextBox x:Name="txtZIP" HorizontalAlignment="Left" Height="22" Margin="5,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Background="#FFA4A4A4" BorderBrush="#FF3C3C3C" FontSize="14" FontFamily="Lato" Padding="0,2,0,0" ToolTip="Input ZIP to Search for Timezone" PreviewTextInput="txtZIP_PreviewTextInput" MaxLength="5" KeyDown="txtZIP_KeyDown"/>
+            <Button x:Name="btnSearch" Content="&#xF002;" HorizontalAlignment="Left" Margin="123,5,0,0" VerticalAlignment="Top" Width="22" Height="22" Background="{x:Null}" Foreground="#FF727271" BorderBrush="#FF3C3C3C" Padding="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontFamily="{DynamicResource FontAwesome}" RenderTransformOrigin="3.571,0.571" PreviewMouseDown="btnSearch_MouseDown"/>
+            <!-- Position Lock button. Unlocked: f3c1, Unlocked: f023 -->
+            <Button x:Name="btnLock" Content="&#xf3c1;" HorizontalAlignment="Left" Margin="177,5,0,0" VerticalAlignment="Top" Width="22" Height="22" Background="{x:Null}" Foreground="#FF727271" BorderBrush="#FF3C3C3C" Padding="1.4,1,1,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontFamily="{DynamicResource FontAwesome}" BorderThickness="1" PreviewMouseDown="btnLock_Toggle"/>
+            <Label x:Name="btnDrag" Content="&#xf58d;" HorizontalAlignment="Left" Margin="228,5,0,0" VerticalAlignment="Top" Height="22" Width="23" FontFamily="{DynamicResource FontAwesome}" Foreground="#FF2C2C2C" FontSize="20" Padding="3,1,0,0" ToolTip="Click and Drag to Move" Cursor="SizeAll" MouseDown="btnDrag_MouseDown" MouseUp="btnDrag_MouseUp" MouseMove="btnDrag_MouseMove"/>
+
+        </Grid>
+    </Border>
+</Window>
